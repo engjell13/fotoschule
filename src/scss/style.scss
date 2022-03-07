@@ -21,6 +21,11 @@ header {
     justify-content: space-between;
     position: relative;
     z-index: 2;
+    .header-left {
+      a {
+        color: #000;
+      }
+    }
   }
   .menu-wrapper {
     position: fixed;
@@ -63,6 +68,11 @@ header {
     }
   }
   &.menu-open {
+    .header-wrapper {
+      a {
+        color: #fff;
+      }
+    }
     .menu-wrapper {
       pointer-events: auto;
       .menu-col {
@@ -71,6 +81,7 @@ header {
     }
   }
 }
+
 .button {
   position: relative;
   color: $darkGrey;
@@ -150,8 +161,9 @@ header {
     transition: $transition;
     color: #fff;
     .banner-top {
-      padding-bottom: 10px;
+      padding-bottom: 20px;
       transition: $transition;
+      margin-bottom: 80px;
       h1 {
         font-size: 40px;
         span {
@@ -161,7 +173,7 @@ header {
     }
     .banner-bottom {
       transition: $transition;
-      padding-top: 10px;
+      padding-top: 20px;
       p {
         font-size: 20px;
         margin-bottom: 20px;
@@ -182,5 +194,8 @@ header {
     left: 50%;
     transform: translate(-50%);
     text-align: center;
+    a {
+      color: #fff;
+    }
   }
 }
