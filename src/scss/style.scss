@@ -5,7 +5,7 @@ $lightGrey: #e9e9e9;
 $lightGreen: #00ffa4;
 $darkGreen: #00371f;
 $baseGreen: #dcefd5;
-$transition: all 0.3s ease;
+$transition: all 0.5s ease;
 $transitionSlow: all 1.5s ease;
 
 header {
@@ -16,15 +16,31 @@ header {
   padding: 15px 0;
   z-index: 8;
   .header-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: relative;
     z-index: 2;
+    #logo {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      margin-left: -20px;
+    }
     .header-left {
+      position: absolute;
+      left: -45px;
+      top: 20px;
+      font-size: 16px;
       a {
         color: #000;
+        margin-right: 20px;
+        span {
+          font-weight: bold;
+        }
       }
+    }
+    #menu-button {
+      position: absolute;
+      right: -45px;
+      top: 20px;
     }
   }
   .menu-wrapper {
@@ -68,11 +84,6 @@ header {
     }
   }
   &.menu-open {
-    .header-wrapper {
-      a {
-        color: #fff;
-      }
-    }
     .menu-wrapper {
       pointer-events: auto;
       .menu-col {
@@ -106,7 +117,7 @@ header {
   .banner {
     .banner-image {
       &::before {
-        border-width: 60px;
+        border-width: 70px;
       }
       img {
         transform: scale(1);
@@ -164,7 +175,8 @@ header {
       padding-bottom: 20px;
       transition: $transition;
       margin-bottom: 80px;
-      h1 {
+      a {
+        color: #fff;
         font-size: 40px;
         span {
           font-weight: bold;
@@ -187,15 +199,60 @@ header {
       }
     }
   }
-  .banner-scrolldown {
+}
+.banner-scrolldown {
+  position: absolute;
+  z-index: 3;
+  bottom: 70px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  a {
+    color: #fff;
+  }
+}
+.application {
+  height: 100vh;
+  background-color: $darkGreen;
+  position: relative;
+  overflow: hidden;
+  h1 {
+    font-size: 130px;
+    color: $lightGreen;
     position: absolute;
-    z-index: 3;
-    bottom: 60px;
+    top: 10%;
+    transform: rotate(345deg);
+  }
+  .text-right {
+    position: absolute;
+    bottom: 15%;
     left: 50%;
-    transform: translate(-50%);
-    text-align: center;
+    color: #fff;
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
     a {
       color: #fff;
+      i {
+        transition: $transition;
+        margin-right: 10px;
+      }
+      span {
+        color: #fff;
+      }
+      &:hover {
+        i {
+          left: -10px;
+        }
+      }
     }
+  }
+  .banner-scrolldown {
+    bottom: 0;
   }
 }
