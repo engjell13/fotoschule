@@ -217,7 +217,7 @@ header {
   position: relative;
   overflow: hidden;
   h1 {
-    font-size: 130px;
+    font-size: 11vw;
     color: $lightGreen;
     position: absolute;
     top: 10%;
@@ -254,5 +254,136 @@ header {
   }
   .banner-scrolldown {
     bottom: 0;
+  }
+}
+.slider {
+  padding: 80px 0;
+  overflow: hidden;
+  &.bg-grey {
+    background-color: $grey;
+  }
+  .slick-slider {
+    .slick-arrow {
+      position: absolute;
+      top: -55px;
+      left: 33%;
+      font-size: 0;
+      background: none;
+      border: none;
+      &::before {
+        content: "\f177";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 30px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+      &.slick-next {
+        margin-left: 60px;
+        &::before {
+          content: "\f178";
+        }
+      }
+    }
+
+    .slider-item {
+      opacity: 0.6;
+      h1 {
+        color: #000;
+        font-size: 16px;
+      }
+      &.slick-current {
+        opacity: 1;
+        h1 {
+          font-size: 30px;
+        }
+        .image-wrapper {
+          padding-top: 0;
+        }
+        .slider-item-content {
+          opacity: 1;
+        }
+      }
+      display: block;
+      .slider-item-content {
+        opacity: 0;
+        transition: $transition;
+        padding-right: 50px;
+        p {
+          color: #000;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        span {
+          color: #000;
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+      .image-wrapper {
+        max-width: 450px;
+        margin-right: 60px;
+        height: 550px;
+        margin-bottom: 30px;
+        padding-top: 120px;
+        transition: $transition;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: $transition;
+      }
+    }
+    .slick-list {
+      overflow: visible;
+    }
+  }
+}
+.overview {
+  padding: 80px 0;
+  .overview-wrapper {
+    display: flex;
+    .overview-item {
+      position: relative;
+      width: 33.33333%;
+      background-color: $darkGrey;
+      &:hover {
+        img {
+          opacity: 0.6;
+        }
+        .overview-content {
+          .hover-up {
+            height: 35px;
+          }
+        }
+      }
+      * {
+        color: #fff;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: $transition;
+      }
+      .overview-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 40px;
+        h2 {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+        .hover-up {
+          transition: $transition;
+          display: block;
+          height: 0;
+          overflow: hidden;
+        }
+      }
+    }
   }
 }
