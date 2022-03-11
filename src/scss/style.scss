@@ -13,34 +13,52 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 0;
+  padding: 35px 0;
   z-index: 8;
-  .header-wrapper {
+  .clip-container {
     position: relative;
-    z-index: 2;
+  }
+  .header-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.dark-header {
+      .button {
+      }
+      .header-left a,
+      a {
+        color: #fff;
+      }
+      #logo {
+        background-image: url(../images/logo-white.png);
+      }
+    }
     #logo {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      margin-left: -20px;
+      background-image: url(../images/logo.png);
+      width: 25px;
+      height: 25px;
+      display: block;
+      margin-right: 15%;
+      background-repeat: no-repeat;
     }
     .header-left {
-      position: absolute;
-      left: -45px;
-      top: 20px;
-      font-size: 16px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+
       a {
         color: #000;
         margin-right: 20px;
-        span {
+        &:nth-child(2) {
           font-weight: bold;
         }
       }
-    }
-    #menu-button {
-      position: absolute;
-      right: -45px;
-      top: 20px;
     }
   }
   .menu-wrapper {
@@ -62,12 +80,16 @@ header {
       width: 33.33333%;
       padding: 5%;
       transition: $transition;
+      &:nth-child(1) {
+        border-right: 1px solid #fff;
+      }
       &:nth-child(1),
       &:nth-child(3) {
         transform: translateY(100%);
       }
       &:nth-child(2) {
         transform: translateY(-100%);
+        border-right: 1px solid #fff;
       }
       * {
         color: #fff;

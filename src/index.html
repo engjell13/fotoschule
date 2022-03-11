@@ -97,15 +97,15 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <div class="header-wrapper">
-              <div class="header-left">
-                <a href="#" class="button">.Fotostudio</a>
-                <a href="#" class="button"><span>.Fotoschule</span> </a>
+            <div class="clip-container">
+              <div class="header-wrapper">
+                <div class="header-left">
+                  <a href="#" class="button">Fotostudio</a>
+                  <a href="#" class="button">Fotoschule</a>
+                </div>
+                <a href="#" id="logo"></a>
+                <a href="#" id="menu-button" class="button"> Menu </a>
               </div>
-              <a href="#" id="logo">
-                <img src="images/logo.png" />
-              </a>
-              <a href="#" id="menu-button" class="button">Menu</a>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@
           </a>
         </div>
       </section>
-      <section class="application">
+      <section class="application" data-jq-clipthru="dark-header">
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
@@ -235,7 +235,10 @@
               <div class="slick-slider">
                 <a href="#" class="slider-item">
                   <div class="image-wrapper">
-                    <img src="images/slider-1.png" />
+                    <img
+                      data-jq-clipthru="dark-header"
+                      src="images/slider-1.png"
+                    />
                   </div>
                   <h1>Fotolehrgang</h1>
                   <div class="slider-item-content">
@@ -251,7 +254,10 @@
                 </a>
                 <a href="#" class="slider-item">
                   <div class="image-wrapper">
-                    <img src="images/Rectangle 2 Copy.png" />
+                    <img
+                      data-jq-clipthru="dark-header"
+                      src="images/Rectangle 2 Copy.png"
+                    />
                   </div>
                   <h1>Fotolehrgang</h1>
                   <div class="slider-item-content">
@@ -267,7 +273,10 @@
                 </a>
                 <a href="#" class="slider-item">
                   <div class="image-wrapper">
-                    <img src="images/slider-3.png" />
+                    <img
+                      data-jq-clipthru="dark-header"
+                      src="images/slider-3.png"
+                    />
                   </div>
                   <h1>Fotolehrgang</h1>
                   <div class="slider-item-content">
@@ -283,7 +292,10 @@
                 </a>
                 <a href="#" class="slider-item">
                   <div class="image-wrapper">
-                    <img src="images/slider-4.png" />
+                    <img
+                      data-jq-clipthru="dark-header"
+                      src="images/slider-4.png"
+                    />
                   </div>
                   <h1>Fotolehrgang</h1>
                   <div class="slider-item-content">
@@ -299,7 +311,10 @@
                 </a>
                 <a href="#" class="slider-item">
                   <div class="image-wrapper">
-                    <img src="images/service-img-1.png" />
+                    <img
+                      data-jq-clipthru="dark-header"
+                      src="images/service-img-1.png"
+                    />
                   </div>
                   <h1>Fotolehrgang</h1>
                   <div class="slider-item-content">
@@ -326,7 +341,7 @@
             </div>
           </div>
         </div>
-        <div class="overview-wrapper">
+        <div class="overview-wrapper" data-jq-clipthru="dark-header">
           <a href="#" class="overview-item">
             <img src="images/service-img-1.png" />
             <div class="overview-content">
@@ -387,6 +402,11 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="./vendors/jquery-ui-1.10.4.custom.min.js"
+    ></script>
+    <script type="text/javascript" src="./vendors/jq-clipthru.js"></script>
     <script type="text/javascript" src="../build/app.js"></script>
   </body>
 </html>
