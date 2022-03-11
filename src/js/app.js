@@ -6,6 +6,7 @@ require("../scss/style.scss");
 $(window).on("load", () => {
   $("body").addClass("hasloaded");
   setTimeout(() => {
+    $(".photo-content").addClass("active");
     $(".banner-content").addClass("active");
   }, 1500);
   $(".header-wrapper").clipthru();
