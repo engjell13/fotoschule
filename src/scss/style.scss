@@ -475,3 +475,55 @@ header {
     }
   }
 }
+.accordeon {
+  padding: 100px 0;
+  .accordeon-item {
+    border-bottom: 2px solid #000;
+    &.active {
+      .accordeon-header {
+        span {
+          transform: rotate(90deg);
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    .accordeon-header {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      span {
+        transition: $transition;
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 2px;
+          top: 0;
+          left: 50%;
+          background-color: #000;
+          transition: $transition;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          top: 50%;
+          left: 0;
+          background-color: #000;
+          transition: $transition;
+        }
+      }
+    }
+    .accordeon-content {
+      display: none;
+    }
+  }
+}
