@@ -527,3 +527,11 @@ header {
     }
   }
 }
+.gallery {
+  overflow: hidden;
+  padding: 100px 0;
+  img {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
