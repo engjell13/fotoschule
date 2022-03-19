@@ -8,6 +8,22 @@ $baseGreen: #dcefd5;
 $transition: all 0.5s ease;
 $transitionSlow: all 1.5s ease;
 
+.bg-green-dark {
+  background-color: $darkGreen;
+  color: $lightGreen;
+}
+.bg-green-light {
+  background-color: $lightGreen;
+  color: $darkGreen;
+}
+.bg-grey {
+  background-color: $grey;
+}
+.bg-dark {
+  background-color: $darkGrey;
+  color: #fff;
+}
+
 h1 {
   line-height: 1.6;
   font-size: 48px;
@@ -524,6 +540,9 @@ header {
     }
     .accordeon-content {
       display: none;
+      p {
+        margin-bottom: 40px;
+      }
     }
   }
 }
@@ -540,6 +559,7 @@ header {
   margin-bottom: 80px;
 }
 .gallery-list {
+  overflow: hidden;
   .col-lg-4:nth-child(3n-1) {
     position: relative;
     top: 40px;
@@ -583,6 +603,80 @@ header {
       top: 30px;
       opacity: 0;
       transition: $transition;
+    }
+  }
+}
+.footer-wrapper {
+  padding: 100px 0;
+  p {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .social-media {
+    font-size: 22px;
+    line-height: 1.7;
+    a {
+      color: #fff;
+      &:hover {
+        font-weight: bold;
+        color: #c5f5e4;
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    flex-flow: column;
+    margin-top: 115px;
+    span {
+      font-size: 20px;
+      line-height: 1.7;
+      a {
+        margin-left: 10px;
+        color: #fff;
+        &:hover {
+          font-weight: bold;
+          color: #c5f5e4;
+        }
+      }
+    }
+    p {
+      margin-top: 55px;
+    }
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  form {
+    input {
+      background: transparent;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px 0;
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 60px;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 20px;
+      &::placeholder {
+        position: relative;
+        top: 0;
+        transition: all 0.3s ease;
+      }
+      &:focus {
+        &::placeholder {
+          top: -25px;
+          font-size: 14px;
+        }
+      }
+    }
+    a {
+      font-size: 20px;
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }
